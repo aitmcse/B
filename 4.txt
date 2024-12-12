@@ -1,0 +1,87 @@
+﻿<html>
+    <head>
+        <title> registarion form </title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            .main{
+                border: 2px dotted black;
+                background-color: antiquewhite;
+                width: 30%;
+                height: 60%;
+                margin-left: 15%;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="date"],
+            select,textarea,label
+            {
+                
+                margin-left: 10px;
+            }
+            #submit{
+                background-color: green;
+                margin-left: 18%;
+                width: 25%;
+                
+            }
+            #reset{
+                background-color: red;
+                margin-left: 20px;
+                width: 25%;
+            }
+            
+                
+            
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <form action="#" method="post">
+                <h2 style="text-align: center;"> Registarion Form </h2>
+                <div>
+                    <label> First name :</label><br>
+                    <input type="text" name="Firstanme " placeholder="ENTER NAME ">
+                </div>
+                <div>
+                    <label> email: </label><br>
+                    <input type="email">
+                </div>
+                <div>
+                    <label> password : </label> <br>
+                    <input type="password" >
+                </div>
+                <div>
+                    <label> date of birth  : </label> <br>
+                    <input type="date" >
+                </div>
+                <div>
+                    <label> gender </label> <br>
+                    <input type="radio" value="male" name="gender" > male 
+                    <input type="radio" value="female" name="gender"> female
+                </div>
+                <br>
+                <div>
+                    <label> country : </label>
+                    <select>
+                        <option>
+                            india 
+                        </option>
+                        <option>usa </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bio"> bio: </label><br>
+                    <textarea value="bio"></textarea>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" id="submit">
+                    <input type="reset" id="reset">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

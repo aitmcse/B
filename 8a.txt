@@ -1,0 +1,67 @@
+﻿<?php
+$counterFile = "counter.txt";
+
+
+if (!file_exists($counterFile)) {
+    file_put_contents($counterFile, "0");
+}
+
+
+$currentCount = file_get_contents($counterFile);
+
+
+$newCount = $currentCount + 1;
+
+
+file_put_contents($counterFile, $newCount);
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <title>Visitor Counter | vtucode</title>
+    <style>
+        body {
+         
+            text-align: center;
+            
+            padding: 15%;
+           
+        }
+
+
+        .container {
+            background-color:whitesmoke;
+            padding: 20px;
+           
+           
+
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website!</h1>
+        <p>You are visitor number: <strong><?php echo $newCount; ?></strong></p>
+    </div>
+</body>
+
+
+</html>
